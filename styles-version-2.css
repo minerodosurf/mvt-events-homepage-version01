@@ -1,20 +1,27 @@
 /* VERSION 2 
 
-ADD this CSS at the button of version 1
+ADD this CSS at the bottom of version 1
 
 */
-
 .promoted-tiles .promoted-tiles-child{
-  width: calc(100% * (1) - 10px - 1px) !important;
+  width: 100% !important;
   display: none;
 }
 .promoted-tiles .promoted-tiles-child:nth-child(-n+4){
   display:inline-block;
 }
-@media screen and (min-width: 768px) {
-  .promoted-tiles .promoted-tiles-child{
-    width: calc(100% * (1/2) - 10px - 1px) !important;
+@media only screen and (min-width: 768px){
+  .promoted-tiles .promoted-tiles-child {
+    margin: 1%;
+    width: 49% !important;
   }
+  .promoted-tiles .promoted-tiles-child:nth-of-type(odd) {
+    margin-left: 0;
+  }
+  .promoted-tiles .promoted-tiles-child:nth-of-type(even) {
+    margin-right: 0;
+  }
+
 }
 .promoted-wrapper {
   padding: 5px 7px;
